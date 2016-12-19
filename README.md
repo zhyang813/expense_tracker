@@ -32,7 +32,8 @@ npm test
 ### Notes
 - Basic functions are done
 - Allow two types of users: regular users and admins
-- Expense record consists of datetime, owned by one user, amount and description
+- Expense record consists of datetime, amount, description, and owned by one user
 - Report view is functional but lacks of by week view, more time and data needed
 - Truly SPA
-- Some tests are provided
+- Some tests are provided, due to time limit, test coverage is low
+- 6-7 hours were spent on this, had hard time finding more time and a quiet place to keep woring on the project
