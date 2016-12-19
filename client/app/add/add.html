@@ -1,0 +1,30 @@
+<div id='container'>
+  <nav class="navigation">
+    <ul>
+      <li>
+       <a href='#/logout'>Logout</a>
+      </li>
+      <li>
+       <a href="#/all">All</a>
+      </li>
+      <li>
+        <a href="#/own">Mine</a>
+      </li>
+      <li>
+        <a class="selected" href="#/add">Add</a>
+      </li>
+      <li>
+        <div>Hello, {{data.username}}</div>
+      </li>
+    </ul>
+  </nav>
+  <form name="addexpenseform" ng-submit='addExpense()'>
+    Enter date and time:
+    <input type='datetime-local' placeholder="yyyy-MM-ddTHH:mm:ss" ng-model='data.datetime'>
+    Enter the Amount:
+    <input type="number" ng-model='data.amount'>
+    Enter the description:
+    <input type="text" ng-model='data.description'>
+    <button>add</button>
+  </form>
+</div>

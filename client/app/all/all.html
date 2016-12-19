@@ -1,0 +1,30 @@
+<div id='container'>
+  <nav class="navigation">
+     <ul>
+      <li>
+        <a href='#/logout'>Logout</a>
+      </li>
+      <li>
+        <a class="selected" href="#/all">All</a>
+      </li>
+      <li>
+        <a href="#/own">Mine</a>
+      </li>
+      <li>
+        <a href="#/add">Add</a>
+      </li>
+      <li>
+        <div>Hello, {{data.username}}</div>
+      </li>
+    </ul>
+  </nav>
+  <div class="expense" ng-repeat="exp in data.expenses">
+    <div class="info"><b>  User: </b>{{exp.username}}  </div>
+    <div class="info"><b>  Datetime: </b>{{convertDatetime(exp.datetime)}}  </div>
+    <div class="info"><b>  Amount: </b>{{exp.amount}}  </div>
+    <div class="info"><b>  Description: </b>{{exp.description}}  </div>
+  </div> 
+  
+</div>
+
+

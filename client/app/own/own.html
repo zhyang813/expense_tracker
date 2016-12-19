@@ -1,0 +1,44 @@
+<div id="main">
+  <nav class="navigation">
+     <ul>
+      <li>
+        <a href='#/logout'>Logout</a>
+      </li>
+      <li>
+        <a href="#/all">All</a>
+      </li>
+      <li>
+        <a class="selected" href="#/own">Mine</a>
+      </li>
+      <li>
+        <a href="#/add">Add</a>
+      </li>
+      <li>
+        <div>Hello, {{data.username}}</div>
+      </li>
+    </ul>
+  </nav>
+  <div class="expense" ng-repeat="exp in data.expenses">
+    <div class="info"><b>  Datetime: </b>{{convertDatetime(exp.datetime)}}  </div>
+    <div class="info"><b>  Amount: </b>{{exp.amount}}  </div>
+    <div class="info"><b>  Description: </b>{{exp.description}}  </div>
+    <button ng-click='delete(exp._id)'>delete</button>
+    <button ng-click='openSideNav(exp)'>edit</button>
+  </div>
+  <div id="mySidenav" class="sidenav">
+    <button style="margin:10px" ng-click='closeSideNav()'>close</button>
+    <form name="addexpenseform" ng-submit='update()'>
+      Enter date and time:
+      <input type='datetime-local' placeholder="yyyy-MM-ddTHH:mm:ss" ng-model='newData.datetime'>
+      Enter the Amount:
+      <input type="number" ng-model='newData.amount'>
+      Enter the description:
+      <input type="text" ng-model='newData.description'>
+      <button>edit</button>
+    </form>
+
+  </div>
+</div>
+
+
+
