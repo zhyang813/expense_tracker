@@ -17,7 +17,7 @@ To run the code locally you need to run Mongod:
 mongod
 ```
 
-You will also need a localserver on port 1337. You can launch the local server with:
+You will also need a localserver on port 8000. You can launch the local server with:
 
 ```sh
 npm start
